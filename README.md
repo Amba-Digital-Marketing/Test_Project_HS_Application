@@ -33,35 +33,126 @@ Date 14/10/2022
 -Code Refactoring Methodologies
 
 PROJECT STRUCTURE
+ 
 
 ## Directory Structure
 
 ```
 lib
-│───main.dart  
-└───src
-    │───config
-    |    └──route.dart
-    │───model
-    │    │──category.dart
-    |    │──data.dart
-    |    └──product.dart
-    │───pages
-    |    │──homePage.dart
-    |    │──mainPage.dart
-    |    │──product_detail.dart
-    |    └──shoping_cart_page.dart
-    │───theme
-    |    │──light_color.dart
-    |    └──theme.dart
-    └───widgets
-         │──BottomNavigationBar
-         |   |──bootom_navigation_bar.dart
-         |   |──bottom_curved_Painter.dart
-         |   └──centered_elasticIn_curve.dart
-         |──bottom_navigation_bar.dart
-         |  customRoute.dart
-         |  prduct_icon.dart
-         │──product_card.dart
-         └──title_text.dart
+Android HS Application
+            |
+            |-----app
+            |      |
+            |      |----manifest
+            |      |       |--AndroidManifest.xml
+            |      |      
+            |      |----java
+            |      |      |--com.microfinance.hsmicrofinance 
+            |      |      |       |--holders
+            |      |      |       |    |--Billsholder.java
+            |      |      |       |
+            |      |      |       |--LocalDatabase
+            |      |      |       |    |--UserDao.java (Interface class)
+            |      |      |       |    |--UserDb.java
+            |      |      |       |    |UserEntity.java
+            |      |      |       |
+            |      |      |       |
+            |      |      |       |--Network
+            |      |      |       |   |--Data
+            |      |      |       |   |    |--Constants.java
+            |      |      |       |   |    |--LoansDescription.java
+            |      |      |       |   |
+            |      |      |       |   |--entity
+            |      |      |       |   |    |--All retrofit response classes are located here
+            |      |      |       |   |
+            |      |      |       |   |--models
+            |      |      |       |   |    |--All model java classes located here.
+            |      |      |       |   |
+            |      |      |       |   |--ApiService.java (Interface class)
+            |      |      |       |   |--RetrofitInstance.java
+            |      |      |       |   |--TokenInterceptor.java
+            |      |      |       |
+            |      |      |       |--permisionsHelper
+            |      |      |       |
+            |      |      |       |--Services
+            |      |      |       |
+            |      |      |       |----UI
+            |      |      |       |    |--Adapters
+            |      |      |       |    |       |--All adapter classes are here
+            |      |      |       |    |
+            |      |      |       |    |--Billings
+            |      |      |       |    |       |--All Billings java files are located here
+            |      |      |       |    |
+            |      |      |       |    |--fragments 
+            |      |      |       |    |       |--All fragments are located here in folders with java files
+            |      |      |       |    |
+            |      |      |       |    |--viewmodels
+            |      |      |       |            |--All ViewModel classes are located here.
+            |      |      |       |
+            |      |      |       
+            |      |      |       
+            |      |      |--com.microfinance.hsmicrofinance(androidTest) 
+            |      |      |                   |--All the UI frontend test runs will be located here 
+            |      |      |--com.microfinance.hsmicrofinance(test)
+            |      |      |                   |--All backend test runs will be located here
+            |      |      
+            |      |      
+            |      |      
+            |      |      
+            |      |
+            |      |----java generated
+            |      |         |----androidx.databinding
+            |      |         |----com.microfinance.hsmicrofinance
+            |      |         |----com.microfinance.hsmicrofinance
+            |      |
+            |      |
+            |      |
+            |      |--------res  
+            |      |         |--anim 
+            |      |         |    |--bottom_up.xml 
+            |      |         |    |--from_left.xml 
+            |      |         |    |--from_right.xml 
+            |      |         |    |--to_left.xml 
+            |      |         |    |--to_right.xml
+            |      |         |   
+            |      |         |--color
+            |      |         |    |--color.xml
+            |      |         |
+            |      |         |--drawable
+            |      |         |      |---All drawables here
+            |      |         |
+            |      |         |--font
+            |      |         |    |--opensansregular.ttf
+            |      |         |                 
+            |      |         |--layout
+            |      |         |     |---All layouts With all UI frontend located here
+            |      |         |    
+            |      |         |
+            |      |         |--menu
+            |      |         |    |--basic_nav_drawer_menu.xml
+            |      |         |    |--bottom_nav_menu.xml
+            |      |         |
+            |      |         |--mipmap 
+            |      |         |     |--ic_launcher 
+            |      |         |     |--ic_launcher_round
+            |      |         |     |--logo_launcher
+            |      |         |
+            |      |         |--navigation       
+            |      |         |       |---basic_nav_graph.xml
+            |      |         |     
+            |      |         |--raw
+            |      |         |--values 
+            |      |         |     |--colors.xml 
+            |      |         |     |--dimensions.xml 
+            |      |         |     |--google_maps_api.xml 
+            |      |         |     |--strings.xml --styles.xml
+            |      |         |--xml
+            |      |             |--provider_paths.xml
+            |      |
+            |      |----res generated
+            |      |       |--values
+            |                   |--com_crashlytics_build_id.xml 
+            |
+            |
+            |--------gradle Scripts
 ```
