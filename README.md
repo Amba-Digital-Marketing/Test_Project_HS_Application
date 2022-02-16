@@ -32,9 +32,8 @@ Date 14/10/2022
 
 -Code Refactoring Methodologies
 
-PROJECT STRUCTURE
+## PROJECT STRUCTURE
  
-
 ## Directory Structure
 
 ```
